@@ -1,3 +1,20 @@
+const { sourceFileArray } = require('./content/summary.json');
+// const sourceFileNameToUrl = require('/');
+
+const generateDynamicRoutes = callback => {
+  const routes = sourceFileArray.map(sourceFileName => {
+    return sourceFileNameToUrl(sourceFileName);
+  });
+  callback(null, routes);
+};
+
+function sourceFileNameToUrl(filepath) {
+  const deleteExt = filepath.replace('.md', '')
+  const fileName = deleteExt.split('/')[deleteExt.split('/').length - 1]
+  const splitArray = fileName.split('-')
+  return `/article/${splitArray.slice(0, 3).join('-')}/${splitArray.slice(3,).join('-')}`
+};
+
 module.exports = {
   /*
   ** Headers of the page
@@ -34,6 +51,9 @@ module.exports = {
         })
       }
     }
+  },
+  generate: {
+    routes: generateDynamicRoutes,
   }
 }
 

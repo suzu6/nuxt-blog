@@ -1,0 +1,17 @@
+{
+  "fileMap": {
+    "content/posts/json/2018-01-01-test.json": {
+      "title": "記事のタイトル",
+      "created_at": "2018-01-01T00:00:00.000Z",
+      "preview": "見出し 2\n\n本文です。\n\nconst f = () => {};\n`",
+      "dir": "content/posts/json",
+      "base": "2018-01-01-test.json",
+      "ext": ".json",
+      "sourceBase": "2018-01-01-test.md",
+      "sourceExt": ".md"
+    }
+  },
+  "sourceFileArray": [
+    "content/posts/2018-01-01-test.md"
+  ]
+}

@@ -11,7 +11,7 @@ import { sourceFileArray } from '../../../../content/summary.json';
 
 export default {
   validate({ params }) {
-    return sourceFileArray.includes(`content/posts/${params.date}-${params.slug}.md`);
+    return sourceFileArray.includes(`markdown/${params.date}-${params.slug}.md`);
   },
   asyncData({ params }) {
     return Object.assign({}, require(`~/content/posts/json/${params.date}-${params.slug}.json`), { params });

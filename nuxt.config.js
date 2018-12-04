@@ -54,6 +54,14 @@ module.exports = {
   },
   generate: {
     routes: generateDynamicRoutes,
-  }
+  },
+  modules: ['@nuxtjs/sitemap'],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.suzu6.net',
+    generate: true,
+    exclude: ['/404'],
+    routes: generateDynamicRoutes,
+  },
 }
 

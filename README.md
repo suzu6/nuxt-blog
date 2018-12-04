@@ -110,6 +110,26 @@ export default {
 </style>
 ```
 
+## sitemap
+
+```sh
+npm install --save @nuxtjs/sitemap
+```
+
+nuxt.config.jsonに追加
+```js
+module.exports = {
+  //省略
+  modules: ['@nuxtjs/sitemap'],
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'https://www.suzu6.net',
+    generate: true,
+    exclude: ['/404'],
+    routes: generateDynamicRoutes,
+  },
+}
+```
 
 ## Build Setup
 
